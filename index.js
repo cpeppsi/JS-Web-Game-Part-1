@@ -24,6 +24,22 @@ function newItem(url, left, bottom) {
   })
 }
 
+function newInventory(){
+  let inventory = document.createElement('div')
+  inventory.style.position = 'fixed'
+  inventory.style.bottom = '0px';
+  inventory.style.left = '0px'
+  inventory.style.width = '100%'
+  inventory.style.height = '100px'
+  inventory.style.display = 'flex'
+  inventory.style.flexDirection = 'row'
+  inventory.style.alignItems = 'center'
+  inventory.style.justifyContent = 'space-evenly'
+  inventory.style.border = '2px solid black'
+  inventory.style.backgroundColor = 'brown'
+  document.body.append(inventory)
+}
+
 let horizon = window.innerHeight / 1.75
 let heightOfSky = window.innerHeight-horizon
 let heightOfGrass = horizon
@@ -31,7 +47,7 @@ let heightOfGrass = horizon
 tile('assets/sky.png', 0, horizon, window.innerWidth/100, heightOfSky/100)
 tile('assets/grass.png', 0, 0, window.innerWidth/100, heightOfGrass/100)
 
-
+newInventory()
 newImage('assets/green-character.gif', 100, 100)
 newImage('assets/tree.png', 200, 300)
 newImage('assets/pillar.png', 350, 100)
